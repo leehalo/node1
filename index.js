@@ -1,27 +1,24 @@
-const express = require ("express")
-const app = express ()
+function testeVar(){
+    if (true){
+        var x = 10
+        console.log('Valor de X dentro do bloco:' + x)
 
-app.get("/", function(req,res){
-    //req são os dados enviados pelo usuario
-    // res são as respostas que vão ser enviadas para o usuário
-    res.send ("<h1> Bem vindo ao SENAI de Osasco! <h1> ")
-})
-
-app.listen(4000, function (erro){
-
-    if (erro) {
-        console.log("ocorreu um erro!")
-    }else{
-    console.log("Servidor iniciado com sucesso!")
+    }
+   
+    console.log ('Valor do X fora do bloco:' + x)
 }
-})
 
-app.get("/aula", function(req,res){
-    res.send("<br><h1>Aula TOP!</h1>")
-})
 
-app.get("/aula/professores", function(req,res){
-    res.send("<br><h1>Os melhores professores estão aqui!</h1>")
-})
+function testeLet(){
+    if (true){
+        let Y = 10
+        console.log('Valor de Y dentro do bloco:' + Y)
 
-//app.set ("View Engine", "ejs")
+    }
+   
+   // console.log ('Valor do Y fora do bloco:' + Y)
+}
+
+testeVar()
+testeLet()
+
